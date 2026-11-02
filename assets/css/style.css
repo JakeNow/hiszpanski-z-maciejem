@@ -3,3 +3,20 @@
 
 /* Czytelne zakończenie sekcji kontaktowej na stronie głównej. */
 .contact-tagline{font-family:Lato,Arial,sans-serif;font-size:clamp(1.1rem,2.2vw,1.3rem);font-weight:900;line-height:1.4;color:var(--green);margin:20px 0 0;padding-left:14px;border-left:4px solid var(--terra);text-align:left}
+
+/* Rozbudowane materiały dydaktyczne: wyjaśnienia, czytanki i słowniczki. */
+.grammar-rule{background:#fff;border:1px solid #e2d4c4;border-radius:12px;padding:18px 20px;margin:14px 0}
+.grammar-rule h3{color:var(--terra);font-size:1.13rem;margin:0 0 8px}
+.grammar-rule p{margin:0 0 10px}
+.grammar-rule p:last-child{margin-bottom:0}
+.grammar-rule-example{background:#f7f0e5;border-left:3px solid var(--olive);padding:8px 12px;border-radius:3px}
+.grammar-rule-example strong{color:var(--green)}
+.reading-text{background:#fff;border-left:5px solid var(--terra);border-radius:10px;padding:23px 25px;font-size:1.08rem;line-height:1.85}
+.reading-text p:last-child{margin-bottom:0}
+.lesson-glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 15px}
+.glossary-entry{background:#fff;border:1px solid #e2d4c4;padding:12px 15px;border-radius:9px}
+.glossary-entry dt{font-weight:700;color:var(--green)}
+.glossary-entry dd{margin:4px 0 0;color:var(--muted)}
+.quiz-heading{margin:24px 0 12px;color:var(--terra)}
+.quiz fieldset:focus-within{border-color:var(--terra)}
+@media(max-width:750px){.lesson-glossary{grid-template-columns:1fr}.reading-text{padding:18px}}
