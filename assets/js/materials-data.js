@@ -85,14 +85,14 @@ window.MATERIALS = [
         "why": "Dzień tygodnia: ser."
       },
       {
-        "q": "Mi hermano ___ cansado después del trabajo.",
+        "q": "Mi hermano ___ cansado después del trabajo (czuje się zmęczony).",
         "options": [
           "es",
           "está",
           "soy"
         ],
         "answer": 1,
-        "why": "Aktualny stan po pracy: estar."
+        "why": "W znaczeniu odczuwanego zmęczenia wybieramy estar: está cansado."
       },
       {
         "q": "La reunión ___ en la sala dos.",
@@ -105,14 +105,14 @@ window.MATERIALS = [
         "why": "Miejsce wydarzenia opisujemy przez ser."
       },
       {
-        "q": "Vosotros ___ muy simpáticos.",
+        "q": "Vosotros ___ estudiantes de español.",
         "options": [
           "sois",
           "estáis",
           "son"
         ],
         "answer": 0,
-        "why": "Typowa cecha i poprawna forma dla vosotros: sois."
+        "why": "Przynależność do grupy / identyfikacja: sois. «Estáis estudiantes» nie jest poprawne."
       },
       {
         "q": "Ahora nosotros ___ en Madrid.",
@@ -243,7 +243,7 @@ window.MATERIALS = [
         "options": [
           "¿Cómo te llamas?",
           "¿Cuántos años tienes?",
-          "¿Dónde está? "
+          "¿Dónde está la escuela?"
         ],
         "answer": 0,
         "why": "¿Cómo te llamas? = Jak masz na imię?"
@@ -401,14 +401,14 @@ window.MATERIALS = [
     ],
     "qs": [
       {
-        "q": "En mi mochila ___ un libro.",
+        "q": "Uzupełnij formą bezosobowego czasownika haber: «En mi mochila ___ un libro».",
         "options": [
           "hay",
           "tengo",
           "tienes"
         ],
         "answer": 0,
-        "why": "Mowa o tym, że książka znajduje się w plecaku."
+        "why": "Polecenie wymaga bezosobowego haber: hay. Bez tego doprecyzowania zdanie «En mi mochila tengo un libro» również byłoby poprawne."
       },
       {
         "q": "Yo ___ dos hermanos.",
@@ -555,7 +555,7 @@ window.MATERIALS = [
     "desc": "Zamawianie jedzenia, pytania o menu i rachunek — dialog A2.",
     "intro": [
       "W restauracji przydają się zwroty grzecznościowe: quisiera (chciałbym/chciałabym), para mí (dla mnie), ¿me trae...? (czy może mi Pan/Pani przynieść...?). Zwróć uwagę na rodzajniki el/la oraz słowa związane z posiłkiem: entrante, plato principal, postre.",
-      "Przeczytaj dialog i spróbuj najpierw zrozumieć jego ogólny sens, nie tłumacząc każdego słowa. Potem odpowiedz na pytania o szczegóły zamówienia i rachunek."
+      "Przeczytaj opowiadanie z fragmentami dialogu i spróbuj najpierw zrozumieć jego ogólny sens, nie tłumacząc każdego słowa. Potem odpowiedz na pytania o szczegóły zamówienia i rachunek."
     ],
     "examples": [
       [
@@ -698,7 +698,7 @@ window.MATERIALS = [
           "Makaronu i pizzy"
         ],
         "answer": 1,
-        "why": "Pide tortilla de patatas y pollo con verduras."
+        "why": "Daniel chce spróbować tortilli ziemniaczanej i kurczaka z warzywami (quiere probar)."
       },
       {
         "q": "Dlaczego Clara pyta o skład zupy?",
@@ -768,14 +768,14 @@ window.MATERIALS = [
     ],
     "qs": [
       {
-        "q": "Ayer ___ al cine con mis amigos.",
+        "q": "Ayer ___ al cine con mis amigos y vi una película.",
         "options": [
           "iba",
           "fui",
           "voy"
         ],
         "answer": 1,
-        "why": "Jednorazowe zakończone wydarzenie: fui."
+        "why": "Opowiadamy o zakończonych wydarzeniach: fui i vi (indefinido)."
       },
       {
         "q": "De pequeño siempre ___ con mi abuela.",
@@ -798,24 +798,24 @@ window.MATERIALS = [
         "why": "Czynność trwająca w tle: leía."
       },
       {
-        "q": "El sábado pasado María ___ un examen.",
+        "q": "Która forma czasownika tener odpowiada pretérito indefinido (ella)?",
         "options": [
           "tenía",
           "tuvo",
           "tiene"
         ],
         "answer": 1,
-        "why": "Zakończone wydarzenie w określonym dniu: tuvo."
+        "why": "Tuvo to forma trzeciej osoby liczby pojedynczej w indefinido. W zdaniach o zaplanowanym egzaminie tenía również może być poprawne, więc pytamy tu o konkretną formę."
       },
       {
-        "q": "Antes nosotros ___ cerca del mar.",
+        "q": "Uzupełnij w imperfecto, opisując dawną sytuację: «Antes nosotros ___ cerca del mar».",
         "options": [
           "vivimos",
           "vivíamos",
           "viviremos"
         ],
         "answer": 1,
-        "why": "Opis dawnej sytuacji: vivíamos."
+        "why": "Vivíamos to imperfecto: opisujemy dawną sytuację bez wyznaczenia jej granic."
       },
       {
         "q": "___ las ocho cuando empezó la película.",
@@ -828,24 +828,24 @@ window.MATERIALS = [
         "why": "Godzina jako tło opowieści: eran."
       },
       {
-        "q": "El verano pasado ___ a Portugal.",
+        "q": "El verano pasado ___ a Portugal una sola vez (zakończona podróż).",
         "options": [
           "viajábamos",
           "viajamos",
           "viajemos"
         ],
         "answer": 1,
-        "why": "Całościowy opis zeszłorocznego wyjazdu: viajamos."
+        "why": "Jednorazowe, zakończone zdarzenie z zeszłego lata: viajamos."
       },
       {
-        "q": "Todos los domingos mi padre ___ paella.",
+        "q": "Cuando era niño, todos los domingos mi padre ___ paella.",
         "options": [
           "cocinó",
           "cocinaba",
           "cocina"
         ],
         "answer": 1,
-        "why": "Powtarzający się zwyczaj: cocinaba."
+        "why": "Kontekst dzieciństwa i powtarzalnego zwyczaju w przeszłości wymaga tu imperfecto: cocinaba."
       },
       {
         "q": "Hacía frío y de repente ___ a nevar.",
@@ -858,14 +858,14 @@ window.MATERIALS = [
         "why": "Nagłe rozpoczęcie wydarzenia: empezó."
       },
       {
-        "q": "Mientras Ana estudiaba, sus amigos ___ a casa.",
+        "q": "Mientras Ana estudiaba, de repente sus amigos ___ a casa.",
         "options": [
           "llegaron",
           "llegaban",
           "llegan"
         ],
         "answer": 0,
-        "why": "Przybycie jest konkretnym zdarzeniem."
+        "why": "De repente wskazuje wydarzenie w toku opowieści: llegaron (indefinido)."
       },
       {
         "q": "Cuando yo ___ diez años, vivía en Galicia.",
@@ -1447,7 +1447,7 @@ window.MATERIALS = [
       ],
       [
         "el acompañamiento",
-        "wsparcie / towarzyszenie"
+        "wsparcie, towarzyszenie (w tekście: ze strony nauczyciela)"
       ],
       [
         "en definitiva",
@@ -1455,7 +1455,7 @@ window.MATERIALS = [
       ],
       [
         "la constancia",
-        "systematyczność"
+        "systematyczność, wytrwałość"
       ]
     ],
     "readingQs": [
@@ -1745,7 +1745,7 @@ window.MATERIALS = [
         "examples": [
           [
             "Lo hice por ti.",
-            "Zrobiłem/zrobiłam to z twojego powodu / dla ciebie."
+            "Zrobiłem/zrobiłam to ze względu na ciebie."
           ],
           [
             "Paseamos por el centro.",
@@ -1762,8 +1762,8 @@ window.MATERIALS = [
         "text": "Para wskazuje przeznaczenie, zamiar, odbiorcę, cel podróży lub termin wykonania zadania.",
         "examples": [
           [
-            "Estudio para aprender.",
-            "Uczę się, żeby się nauczyć."
+            "Estudio para aprobar el examen.",
+            "Uczę się, żeby zdać egzamin."
           ],
           [
             "Este regalo es para Ana.",
@@ -1793,7 +1793,7 @@ window.MATERIALS = [
     "examples": [
       [
         "Gracias por tu ayuda.",
-        "Dziękuję za pomoc."
+        "Dziękuję za twoją pomoc."
       ],
       [
         "Salimos para Madrid mañana.",
@@ -1840,14 +1840,14 @@ window.MATERIALS = [
         "why": "Odbiorca prezentu: para."
       },
       {
-        "q": "Caminamos ___ el parque.",
+        "q": "Caminamos ___ el parque, pasando entre los árboles (trasa przez park).",
         "options": [
           "para",
           "por",
           "porque"
         ],
         "answer": 1,
-        "why": "Droga przez park: por."
+        "why": "Por wskazuje drogę przez określony obszar."
       },
       {
         "q": "Necesito el informe ___ el viernes.",
@@ -1890,24 +1890,24 @@ window.MATERIALS = [
         "why": "Pytanie o przyczynę: ¿Por qué?"
       },
       {
-        "q": "Salimos ___ Barcelona mañana.",
+        "q": "Salimos ___ Barcelona mañana (Barcelona jest celem podróży).",
         "options": [
           "por",
           "para",
           "de"
         ],
         "answer": 1,
-        "why": "Cel podróży: para."
+        "why": "Para wskazuje kierunek lub cel podróży; por oznaczałoby trasę przez miasto, a de — wyjazd z niego."
       },
       {
-        "q": "Lo hice ___ amor.",
+        "q": "Jak powiedzieć «Zrobiłem/zrobiłam to z miłości» (przyczyna działania)?",
         "options": [
-          "para",
-          "por",
-          "con"
+          "Lo hice por amor.",
+          "Lo hice con amor.",
+          "Lo hice para amor."
         ],
-        "answer": 1,
-        "why": "Motyw lub powód: por."
+        "answer": 0,
+        "why": "Por amor wskazuje przyczynę lub motyw. Con amor oznacza «z miłością», czyli sposób wykonania czynności, i samo w sobie też jest poprawnym hiszpańskim zdaniem."
       }
     ]
   },
@@ -2311,7 +2311,7 @@ window.MATERIALS = [
       ],
       [
         "Perdimos el tren.",
-        "Spóźniliśmy się na pociąg / nie zdążyliśmy na pociąg."
+        "Nie zdążyliśmy na pociąg (odjechał bez nas)."
       ],
       [
         "El paisaje era precioso.",
@@ -2365,7 +2365,7 @@ window.MATERIALS = [
       ],
       [
         "hacer senderismo",
-        "chodzić po górach / szlakach"
+        "wędrować po szlakach, uprawiać turystykę pieszą"
       ]
     ],
     "qs": [
@@ -2542,15 +2542,15 @@ window.MATERIALS = [
     "glossary": [
       [
         "la formación continua",
-        "kształcenie ustawiczne"
+        "ciągłe kształcenie"
       ],
       [
         "actualizar competencias",
-        "aktualizować kompetencje"
+        "rozwijać lub aktualizować kompetencje"
       ],
       [
         "asumir responsabilidades",
-        "przejmować obowiązki"
+        "podejmować nowe obowiązki"
       ],
       [
         "conciliar",
@@ -2573,12 +2573,12 @@ window.MATERIALS = [
       {
         "q": "Co oznacza „formación continua”?",
         "options": [
-          "ciągłe doskonalenie umiejętności",
+          "ciągłe kształcenie",
           "przerwa w edukacji",
           "nauka tylko w dzieciństwie"
         ],
         "answer": 0,
-        "why": "Formación continua to kształcenie ustawiczne."
+        "why": "Formación continua oznacza kontynuowanie nauki i rozwijanie kompetencji, zwłaszcza po zakończeniu edukacji początkowej."
       },
       {
         "q": "Jak rozumieć „conciliar trabajo y estudios”?",
@@ -2593,12 +2593,12 @@ window.MATERIALS = [
       {
         "q": "Co oznacza „asumir nuevas responsabilidades”?",
         "options": [
-          "przejmować nowe obowiązki",
+          "wziąć na siebie nowe obowiązki",
           "porzucać obowiązki",
           "wydawać dokumenty"
         ],
         "answer": 0,
-        "why": "Asumir = podjąć na siebie."
+        "why": "Asumir responsabilidades = podejmować lub brać na siebie obowiązki."
       },
       {
         "q": "Jak przetłumaczysz „a largo plazo”?",
