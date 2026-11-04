@@ -111,3 +111,7 @@
 .trial-promo p{color:#565b52;margin:0;max-width:610px}
 .trial-promo .btn{flex:0 0 auto}
 @media(max-width:750px){.trial-card{padding:20px 18px}.trial-promo{flex-direction:column;align-items:stretch;padding:21px 18px;gap:18px}.trial-promo .btn{width:100%}.hero-trial{font-size:.95rem!important}}
+
+/* Większy odstęp pod zaproszeniem na lekcję próbną w sekcji zapisów. */
+.lesson-trial-card{margin-top:28px;margin-bottom:46px}
+@media(max-width:750px){.lesson-trial-card{margin-bottom:34px}}
