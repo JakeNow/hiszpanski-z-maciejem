@@ -80,3 +80,19 @@
 .game-panel{padding:12px}
 }
 @media print{.game-actions,.game-status,.gap-bank{display:none!important}.game-panel{border:none;padding:0}.cross-grid,.search-grid{print-color-adjust:exact;-webkit-print-color-adjust:exact}.gap-input{border:1px solid #777}}
+
+
+/* Opinie uczniów: karuzela zamiast lewego bloku stopki po dodaniu opinii. */
+.footer-reviews{flex:1 1 480px;max-width:580px;min-width:0;padding:4px 0 0}
+.footer-review-title{font-size:1.05rem;color:#f7f0e5;margin:0 0 13px}
+.footer-review-quote{font-size:clamp(.96rem,1.5vw,1.08rem);font-style:italic;line-height:1.7;color:#f5ede0;margin:0;min-height:78px;max-width:540px}
+.footer-review-author{display:block;margin-top:9px;font-size:.84rem;font-weight:700;font-style:normal;color:var(--gold)}
+.footer-review-controls{display:flex;align-items:center;gap:12px;margin-top:15px}
+.footer-review-counter{color:#d5d2ca;font-size:.82rem;font-variant-numeric:tabular-nums}
+.footer-review-arrow{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:36px;padding:0;border:1px solid #8a8c83;border-radius:50%;background:transparent;color:white;font-size:1.15rem;cursor:pointer}
+.footer-review-arrow:hover{background:#ffffff21;border-color:var(--gold)}
+.footer-review-enter{animation:footer-review-fade .35s ease-out}
+@keyframes footer-review-fade{from{opacity:.25;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:750px){.footer-reviews{max-width:100%;flex:auto}.footer-review-quote{min-height:0}}
+@media(prefers-reduced-motion:reduce){.footer-review-enter{animation:none}}
+@media print{.footer-review-controls{display:none!important}}
