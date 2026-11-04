@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="376" height="112" viewBox="0 0 376 112" role="img" aria-labelledby="logoTitle">
+<title id="logoTitle">Hiszpański z Maciejem</title>
+<g transform="translate(3 9) scale(.52)">
+<path d="M17 37 C43 24 68 25 91 40 L91 151 C66 136 43 134 17 143 Z" fill="#C8102E"/>
+<path d="M99 40 C123 23 149 25 173 36 L173 143 C148 135 124 135 99 151 Z" fill="#FFC928"/>
+<path d="M8 53 L8 151 C39 142 68 146 91 162 L91 151 C66 136 43 134 17 143 L17 37" fill="none" stroke="#C8102E" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M183 53 L183 151 C151 142 122 146 99 162 L99 151 C123 136 148 135 173 143 L173 36" fill="none" stroke="#C8102E" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M116 18 C134 -3 151 24 166 9 C170 6 173 3 177 6 C177 27 159 33 145 28 C130 23 123 26 116 31 Z" fill="#C8102E"/>
+<circle cx="120" cy="93" r="7" fill="#0D1B2A"/><circle cx="139" cy="93" r="7" fill="#0D1B2A"/><circle cx="158" cy="93" r="7" fill="#0D1B2A"/>
+</g>
+<g fill="#0D1B2A" font-family="Lato,Arial,Helvetica,sans-serif">
+<text x="118" y="65" font-size="49" font-weight="900" textLength="240" lengthAdjust="spacingAndGlyphs">Hiszpański</text>
+<text x="162" y="102" font-size="30" font-weight="700" textLength="152" lengthAdjust="spacingAndGlyphs">z Maciejem</text>
+</g>
+<path d="M125 91 H152 M324 91 H351" fill="none" stroke="#FFC928" stroke-width="6" stroke-linecap="round"/>
+</svg>
