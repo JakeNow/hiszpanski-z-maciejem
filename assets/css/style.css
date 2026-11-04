@@ -20,3 +20,63 @@
 .quiz-heading{margin:24px 0 12px;color:var(--terra)}
 .quiz fieldset:focus-within{border-color:var(--terra)}
 @media(max-width:750px){.lesson-glossary{grid-template-columns:1fr}.reading-text{padding:18px}}
+
+
+/* Gry edukacyjne: krzyżówki, wykreślanki oraz uzupełnianie luk. */
+.game-panel{background:#fffaf2;border:1px solid #e2d4c4;border-radius:18px;padding:clamp(16px,3vw,30px);max-width:100%}
+.game-instruction{color:var(--muted);max-width:760px;margin:0 0 22px}
+.game-grid-scroll{max-width:100%;overflow-x:auto;overflow-y:hidden;padding-bottom:9px;overscroll-behavior-x:contain}
+.cross-grid,.search-grid{--cell:39px;display:grid;grid-template-columns:repeat(var(--cols),var(--cell));gap:3px;width:max-content;margin:auto;padding:12px;background:#e8ddca;border-radius:12px}
+.cross-cell,.search-cell{width:var(--cell);height:var(--cell);position:relative}
+.cross-cell.blocked{background:transparent}
+.cross-cell .cross-num{position:absolute;top:0;left:3px;font-size:.57rem;line-height:1.3;color:#4e5d55;pointer-events:none;z-index:1}
+.cross-cell .cross-letter{display:block;width:100%;height:100%;margin:0;padding:9px 2px 0;background:white;color:#162b26;text-align:center;font:700 1.13rem Lato,Arial,sans-serif;border:1px solid #cbbda9;border-radius:3px;min-width:0}
+.cross-cell.active .cross-letter{background:#fff4d6;border-color:#b78547}
+.cross-cell.incorrect .cross-letter{background:#ffe5e0;border:2px solid #b85c43}
+.cross-clues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:25px}
+.cross-clue-panel{min-width:0}
+.cross-clue-panel h3{color:var(--terra);margin:0 0 12px}
+.cross-clue{display:block;width:100%;margin:0 0 7px;padding:11px 13px;text-align:left;line-height:1.5;font:inherit;color:var(--green);background:white;border:1px solid #e2d4c4;border-radius:8px;cursor:pointer}
+.cross-clue:hover,.cross-clue[aria-pressed="true"]{background:#fff0d1;border-color:#bf936a}
+.search-cell{display:flex;align-items:center;justify-content:center;border:1px solid #d8c9b7;background:white;color:#253b32;border-radius:5px;cursor:pointer;font:700 1rem Lato,Arial,sans-serif;padding:0;touch-action:manipulation}
+.search-cell:hover{background:#fff0d1}
+.search-cell.chosen{background:#ffd388;border:2px solid var(--terra)}
+.search-cell.found{background:#cadfc5;border-color:#4d7c51;color:#173e25}
+.search-cell.chosen.found{outline:2px solid var(--terra)}
+.search-words{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:9px;margin:16px 0;padding:0}
+.search-words li{border:1px solid #e2d4c4;background:white;border-radius:8px;padding:8px 10px;font-weight:700;text-align:center;letter-spacing:.025em}
+.search-words li.word-found{background:#e2f0df;color:#3b6841;text-decoration:line-through}
+.game-progress{font-weight:700;margin:18px 0 0}
+.game-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px}
+.game-actions .btn{min-height:44px}
+.game-status{margin:18px 0 0;font-weight:700;min-height:1.5em;color:var(--green)}
+.gap-paragraph{background:white;border:1px solid #e2d4c4;border-radius:12px;padding:18px 20px;line-height:2.8;font-size:1.06rem}
+.gap-inline{display:inline-flex;align-items:center;gap:5px;margin:2px 4px 2px 2px;vertical-align:baseline}
+.gap-input{width:12ch;max-width:38vw;min-width:8ch;margin:0;padding:6px 7px;border-radius:6px;border:1.5px solid #bca38c;background:#fff;font:700 1rem Roboto,Arial,sans-serif;text-align:center}
+.gap-input.gap-correct{border-color:#34834d;background:#eaf7e9}
+.gap-input.gap-wrong{border-color:#b85c43;background:#ffece4}
+.gap-hint{color:#625d56;font-size:.68rem;white-space:normal;line-height:1.3;max-width:140px}
+.gap-bank{background:#f7f0e5;border:1px solid #e2d4c4;border-radius:12px;padding:16px;margin:0 0 22px}
+.gap-bank h3{font-size:1rem;margin-bottom:12px}
+.gap-bank-list{display:flex;flex-wrap:wrap;gap:8px}
+.gap-bank-button{border:1px solid #bea790;background:white;color:var(--green);font:700 .94rem Roboto,Arial,sans-serif;border-radius:20px;padding:8px 14px;cursor:pointer}
+.gap-bank-button:hover{background:#fff0d1}
+.gap-feedback{padding-left:22px;margin-top:20px}
+.gap-feedback li{margin:7px 0}
+.feedback-ok{color:#267343}
+.feedback-error{color:#8f4333}
+.game-library{border-top:1px solid #e2d4c4}
+.game-library .filters{max-width:310px;display:block;margin:15px 0 20px}
+.game-library .filters select{margin-top:6px}
+@media(max-width:750px){
+.cross-grid,.search-grid{--cell:33px;gap:2px;padding:9px}
+.cross-cell .cross-letter{font-size:.95rem;padding-top:7px}
+.cross-cell .cross-num{font-size:.49rem;left:2px}
+.cross-clues{grid-template-columns:1fr;gap:17px}
+.game-actions{flex-direction:column;align-items:stretch}
+.game-actions .btn{width:100%}
+.gap-paragraph{padding:12px;line-height:2.5}
+.gap-hint{max-width:110px;font-size:.62rem}
+.game-panel{padding:12px}
+}
+@media print{.game-actions,.game-status,.gap-bank{display:none!important}.game-panel{border:none;padding:0}.cross-grid,.search-grid{print-color-adjust:exact;-webkit-print-color-adjust:exact}.gap-input{border:1px solid #777}}
