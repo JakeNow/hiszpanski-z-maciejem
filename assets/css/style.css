@@ -96,3 +96,18 @@
 @media(max-width:750px){.footer-reviews{max-width:100%;flex:auto}.footer-review-quote{min-height:0}}
 @media(prefers-reduced-motion:reduce){.footer-review-enter{animation:none}}
 @media print{.footer-review-controls{display:none!important}}
+
+/* Bezpłatna lekcja próbna online */
+.hero-trial{max-width:680px;margin:-7px 0 25px;font-size:1rem!important;line-height:1.6;color:#f4eadb}
+.hero-trial strong{color:#ffe2a8}
+.hero-trial a{color:#ffe2a8;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.trial-card{margin:28px 0 24px;padding:26px 28px;border-radius:15px;border:1px solid #ead3b5;border-left:5px solid var(--terra);background:#fff9ed;box-shadow:0 3px 16px #34443c0b;scroll-margin-top:22px}
+.trial-card h3{font-size:clamp(1.3rem,2.5vw,1.62rem);margin:10px 0 13px;color:var(--green)}
+.trial-card p{color:#4f554c;max-width:690px}
+.trial-card .btn{margin-top:5px}
+.trial-label{display:inline-block;font-size:.77rem;font-weight:900;letter-spacing:.075em;color:#a34c33}
+.trial-promo{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:25px;padding:24px 26px;border-radius:15px;background:#fffaf2;border:1px solid #e3d0b7;border-left:5px solid var(--terra)}
+.trial-promo h3{font-size:clamp(1.15rem,2.2vw,1.42rem);margin:6px 0 8px;color:var(--green)}
+.trial-promo p{color:#565b52;margin:0;max-width:610px}
+.trial-promo .btn{flex:0 0 auto}
+@media(max-width:750px){.trial-card{padding:20px 18px}.trial-promo{flex-direction:column;align-items:stretch;padding:21px 18px;gap:18px}.trial-promo .btn{width:100%}.hero-trial{font-size:.95rem!important}}
