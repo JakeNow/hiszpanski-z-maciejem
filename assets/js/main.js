@@ -5,7 +5,12 @@ document.getElementById('year').textContent=new Date().getFullYear();const toggl
  * wpisujemy je w tablicy poniżej: { text: "...", author: "..." }.
  * Pusta lista = zachowujemy aktualny tekst w stopce, bez fikcyjnych recenzji.
  */
-const CLIENT_REVIEWS = [];
+const CLIENT_REVIEWS = [
+  {
+    "text": "Lekcje odbywają się w bardzo luźnej, przyjaznej atmosferze, bez niepotrzebnego stresu i presji. Maciej jest niesamowicie cierpliwy, wyrozumiały i po prostu ludzki. Można się dogadać, zmienić plany, przełożyć coś, kiedy życie trochę pokrzyżuje szyki, i zawsze spotyka się to ze zrozumieniem. Nie ma nerwów, zniecierpliwienia ani poczucia, że za coś trzeba przepraszać. Do tego ziomalskie podejście, dzięki któremu nauka jest przyjemnością. Super człowiek i świetny nauczyciel. Polecam z całego serca!",
+    "author": "Koleta"
+  }
+];
 
 document.addEventListener('DOMContentLoaded', () => {
   const reviews = CLIENT_REVIEWS.filter(review =>
