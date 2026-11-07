@@ -1,4 +1,4 @@
-document.getElementById('year').textContent=new Date().getFullYear();const toggle=document.getElementById('menu-toggle');toggle?.addEventListener('click',()=>{const n=document.getElementById('main-nav');const open=n.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Zamknij menu':'Otwórz menu')});
+document.getElementById('year').textContent=new Date().getFullYear();const toggle=document.getElementById('menu-toggle');toggle?.addEventListener('click',()=>{const n=document.getElementById('main-nav');const open=n.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?(document.documentElement.lang==='es'?'Cerrar menú':'Zamknij menu'):(document.documentElement.lang==='es'?'Abrir menú':'Otwórz menu'))});
 
 /* OPINIE UCZNIÓW
  * Po otrzymaniu prawdziwych, zaakceptowanych do publikacji opinii
