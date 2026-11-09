@@ -30,6 +30,46 @@ document.addEventListener('DOMContentLoaded', () => {
     return section;
   };
   const report = value => { status.textContent = value; };
+
+  // Klawiatura ekranowa do ćwiczeń wymagających wpisywania hiszpańskich znaków.
+  // Akcenty są wstawiane do ostatnio wybranego pola, bez utraty pozycji kursora.
+  const makeAccentBar = (target, crossword=false) => {
+    const panel = node('div','spanish-keyboard');
+    panel.setAttribute('role','group');
+    panel.setAttribute('aria-label','Przyciski do wpisywania hiszpańskich znaków');
+    panel.append(node('span','spanish-keyboard-label','Hiszpańskie znaki:'));
+    const chars = crossword ? ['á','é','í','ó','ú','ü','ñ'] :
+      ['á','é','í','ó','ú','ü','ñ','¿','¡'];
+    for (const char of chars) {
+      const key = button(char, () => {
+        const input = target();
+        if (!input) {
+          report(crossword
+            ? 'Kliknij najpierw kratkę krzyżówki, a potem wybierz znak.'
+            : 'Kliknij najpierw lukę w tekście, a potem wybierz znak.');
+          return;
+        }
+        const start = typeof input.selectionStart === 'number' ?
+          input.selectionStart : input.value.length;
+        const end = typeof input.selectionEnd === 'number' ?
+          input.selectionEnd : start;
+        input.focus();
+        if (crossword) {
+          // W krzyżówce jedno pole odpowiada jednej literze.
+          input.value = char.toLocaleUpperCase('es');
+        } else if (typeof input.setRangeText === 'function') {
+          input.setRangeText(char, start, end, 'end');
+        } else {
+          input.value = input.value.slice(0,start) + char + input.value.slice(end);
+        }
+        input.dispatchEvent(new Event('input',{bubbles:true}));
+      },'spanish-key');
+      key.setAttribute('aria-label','Wstaw znak '+char);
+      key.title='Wstaw '+char;
+      panel.append(key);
+    }
+    return panel;
+  };
   document.title = game.title + ' | Hiszpański z Maciejem';
   $('game-label').textContent = game.level + ' / ' + modeNames[game.type];
   $('game-title').textContent = game.title;
@@ -54,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const starts = [...new Set(entries.map(e=>e.row+','+e.col))]
       .sort((a,b)=>{const [ar,ac]=a.split(',').map(Number),[br,bc]=b.split(',').map(Number);return ar-br||ac-bc;});
     const numbers = new Map(starts.map((key,i)=>[key,i+1]));
-    const heading = node('p','game-instruction','Kliknij hasło poziome lub pionowe i wpisuj litery w kratkach. Przecięcia uzupełniają się automatycznie. Wpisuj hiszpańskie znaki, także ñ i akcenty.');
+    const heading = node('p','game-instruction','Kliknij hasło poziome lub pionowe i wpisuj litery w kratkach. Przecięcia uzupełniają się automatycznie. Do wpisywania liter z akcentami i ñ możesz użyć przycisków pod planszą.');
     root.append(heading);
     const scroll = node('div','game-grid-scroll');
     scroll.tabIndex = 0;
@@ -67,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     root.append(scroll);
     const cells = new Map();
     let active = 0;
+    let focusedCrossword = null;
     const clueButtons = new Map();
     const highlight = () => {
       for (const {wrap} of cells.values()) wrap.classList.remove('active');
@@ -94,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wrap.append(input);
         cells.set(key,{wrap,input});
         input.addEventListener('focus',() => {
+          focusedCrossword = input;
           if (!entries[active].keys.includes(key)) active=positions.get(key).entries[0];
           highlight();
         });
@@ -117,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       grid.append(wrap);
     }
+    root.append(makeAccentBar(() => focusedCrossword, true));
     const clueWrap=node('div','cross-clues');
     for(const dir of ['across','down']){
       const panel=node('section','cross-clue-panel');
@@ -239,9 +282,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderGaps() {
-    root.append(node('p','game-instruction','Wpisz brakujące słowa w hiszpańskim tekście. Korzystaj ze wskazówek przy lukach. Akcenty (á, é, í, ó, ú) i litera ñ mają znaczenie przy sprawdzaniu.'));
+    root.append(node('p','game-instruction','Wpisz brakujące słowa w hiszpańskim tekście. Korzystaj ze wskazówek przy lukach. Akcenty (á, é, í, ó, ú) i litera ñ mają znaczenie przy sprawdzaniu. Przyciski poniżej pomogą Ci je wpisać.'));
     const all=[];
     let focused=null;
+    root.append(makeAccentBar(() => focused));
     for(const paragraph of game.paragraphs){
       const p=node('p','gap-paragraph');
       paragraph.gaps.forEach((gap,i)=>{
