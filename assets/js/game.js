@@ -94,8 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const starts = [...new Set(entries.map(e=>e.row+','+e.col))]
       .sort((a,b)=>{const [ar,ac]=a.split(',').map(Number),[br,bc]=b.split(',').map(Number);return ar-br||ac-bc;});
     const numbers = new Map(starts.map((key,i)=>[key,i+1]));
-    const heading = node('p','game-instruction','Kliknij hasło poziome lub pionowe i wpisuj litery w kratkach. Przecięcia uzupełniają się automatycznie. Do wpisywania liter z akcentami i ñ możesz użyć przycisków pod planszą.');
+    const heading = node('p','game-instruction','Kliknij hasło poziome lub pionowe i wpisuj litery w kratkach. Przecięcia uzupełniają się automatycznie. Do wpisywania liter z akcentami i ñ możesz użyć przycisków nad planszą.');
     root.append(heading);
+    root.append(makeAccentBar(() => focusedCrossword, true));
     const scroll = node('div','game-grid-scroll');
     scroll.tabIndex = 0;
     scroll.setAttribute('aria-label','Krzyżówka — można przewijać poziomo');
@@ -159,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       grid.append(wrap);
     }
-    root.append(makeAccentBar(() => focusedCrossword, true));
     const clueWrap=node('div','cross-clues');
     for(const dir of ['across','down']){
       const panel=node('section','cross-clue-panel');
