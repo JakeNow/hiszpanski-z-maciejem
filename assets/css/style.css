@@ -168,3 +168,6 @@
 .brand img[src*="logo-ronda.svg"]{width:150px;height:auto}
 @media(max-width:1020px){.brand img[src*="logo-ronda.svg"]{width:120px}}
 @media(max-width:750px){.brand img[src*="logo-ronda.svg"]{width:104px}}
+
+/* Stopka po usunięciu opisu marki — wyśrodkowane linki */
+.footer-inner{justify-content:center}.foot-links{justify-content:center;align-items:center}
