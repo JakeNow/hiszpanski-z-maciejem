@@ -131,3 +131,11 @@
   nav.open{display:flex}
   nav a{font-size:.95rem}
 }
+
+/* Długie opinie: pełna treść dostępna po rozwinięciu */
+.footer-review-quote{white-space:pre-line;overflow-wrap:anywhere}
+.footer-review-quote.is-truncated:not(.is-expanded){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:7;overflow:hidden}
+.footer-review-more{margin-top:10px;padding:5px 0;border:0;background:transparent;color:var(--gold);font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.footer-review-more:hover{color:#fff}
+.footer-review-more:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+@media(max-width:750px){.footer-review-quote.is-truncated:not(.is-expanded){-webkit-line-clamp:6}}
