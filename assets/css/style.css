@@ -163,3 +163,8 @@
 .ronda-story-text p:last-child{margin-bottom:0}
 .ronda-story-text strong{color:var(--green)}
 @media(max-width:750px){.ronda-story{grid-template-columns:1fr;gap:15px;padding:24px 20px}.ronda-story-motto{max-width:none}}
+
+/* RONDA — nowe pionowe logo z mostem i podpisem szkoły */
+.brand img[src*="logo-ronda.svg"]{width:150px;height:auto}
+@media(max-width:1020px){.brand img[src*="logo-ronda.svg"]{width:120px}}
+@media(max-width:750px){.brand img[src*="logo-ronda.svg"]{width:104px}}
