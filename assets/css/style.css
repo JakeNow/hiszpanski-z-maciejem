@@ -139,3 +139,13 @@
 .testimonial-full p:last-child{margin-bottom:0}
 .testimonial-author{display:block;margin-top:25px;padding-top:16px;border-top:1px solid #efe7dc;font-style:normal;font-weight:800;color:var(--green)}
 @media(max-width:750px){.testimonials-grid{grid-template-columns:1fr;gap:18px}.testimonials-lead{margin-bottom:25px}.testimonial-card{padding:23px 20px}}
+
+/* Klawiatura z hiszpańskimi znakami w krzyżówkach i lukach */
+.spanish-keyboard{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 14px;margin:16px 0 22px;background:#f7f0e5;border:1px solid #dfcbb1;border-radius:12px;position:sticky;top:8px;z-index:3;box-shadow:0 3px 12px #34443c12}
+.spanish-keyboard-label{font-size:.88rem;font-weight:800;color:var(--green);margin-right:4px}
+.spanish-key{min-width:42px;min-height:44px;padding:7px 10px;background:white;color:var(--green);border:1.5px solid #c5ae92;border-radius:9px;cursor:pointer;font:700 1.16rem Roboto,Arial,sans-serif;line-height:1}
+.spanish-key:hover{background:#fff3d8;border-color:var(--terra)}
+.spanish-key:active{background:#fce3c8}
+.spanish-key:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+@media(max-width:750px){.spanish-keyboard{gap:6px;padding:10px;margin:12px 0 18px;top:4px}.spanish-keyboard-label{flex:1 0 100%;margin-bottom:2px}.spanish-key{min-width:39px;min-height:44px;padding:7px 9px}}
+@media print{.spanish-keyboard{display:none}}
