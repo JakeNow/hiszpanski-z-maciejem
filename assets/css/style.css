@@ -82,21 +82,6 @@
 @media print{.game-actions,.game-status,.gap-bank{display:none!important}.game-panel{border:none;padding:0}.cross-grid,.search-grid{print-color-adjust:exact;-webkit-print-color-adjust:exact}.gap-input{border:1px solid #777}}
 
 
-/* Opinie uczniów: karuzela zamiast lewego bloku stopki po dodaniu opinii. */
-.footer-reviews{flex:1 1 480px;max-width:580px;min-width:0;padding:4px 0 0}
-.footer-review-title{font-size:1.05rem;color:#f7f0e5;margin:0 0 13px}
-.footer-review-quote{font-size:clamp(.96rem,1.5vw,1.08rem);font-style:italic;line-height:1.7;color:#f5ede0;margin:0;min-height:78px;max-width:540px}
-.footer-review-author{display:block;margin-top:9px;font-size:.84rem;font-weight:700;font-style:normal;color:var(--gold)}
-.footer-review-controls{display:flex;align-items:center;gap:12px;margin-top:15px}
-.footer-review-counter{color:#d5d2ca;font-size:.82rem;font-variant-numeric:tabular-nums}
-.footer-review-arrow{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:36px;padding:0;border:1px solid #8a8c83;border-radius:50%;background:transparent;color:white;font-size:1.15rem;cursor:pointer}
-.footer-review-arrow:hover{background:#ffffff21;border-color:var(--gold)}
-.footer-review-enter{animation:footer-review-fade .35s ease-out}
-@keyframes footer-review-fade{from{opacity:.25;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:750px){.footer-reviews{max-width:100%;flex:auto}.footer-review-quote{min-height:0}}
-@media(prefers-reduced-motion:reduce){.footer-review-enter{animation:none}}
-@media print{.footer-review-controls{display:none!important}}
-
 /* Bezpłatna lekcja próbna online */
 .hero-trial{max-width:680px;margin:-7px 0 25px;font-size:1rem!important;line-height:1.6;color:#f4eadb}
 .hero-trial strong{color:#ffe2a8}
@@ -132,10 +117,25 @@
   nav a{font-size:.95rem}
 }
 
-/* Długie opinie: pełna treść dostępna po rozwinięciu */
-.footer-review-quote{white-space:pre-line;overflow-wrap:anywhere}
-.footer-review-quote.is-truncated:not(.is-expanded){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:7;overflow:hidden}
-.footer-review-more{margin-top:10px;padding:5px 0;border:0;background:transparent;color:var(--gold);font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-.footer-review-more:hover{color:#fff}
-.footer-review-more:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-@media(max-width:750px){.footer-review-quote.is-truncated:not(.is-expanded){-webkit-line-clamp:6}}
+/* Opinie uczniów na stronie głównej — statyczne karty, bez karuzeli */
+.testimonials-section{background:#fcf7ed}
+.testimonials-lead{max-width:760px;margin-bottom:32px}
+.testimonials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.testimonial-card{min-width:0;background:#fff;border:1px solid #e7d9c8;border-radius:18px;padding:clamp(22px,3vw,34px);box-shadow:0 7px 24px #34443c0c;display:flex;flex-direction:column}
+.testimonial-kicker{display:block;margin-bottom:18px;color:#a34c33;font-size:.74rem;font-weight:850;letter-spacing:.085em}
+.testimonial-details{margin:0;flex:1}
+.testimonial-details summary{list-style:none;cursor:pointer}
+.testimonial-details summary::-webkit-details-marker{display:none}
+.testimonial-details summary::marker{content:""}
+.testimonial-excerpt{display:block;font-size:clamp(1rem,1.7vw,1.12rem);line-height:1.75;font-style:italic;color:var(--green);overflow-wrap:anywhere}
+.testimonial-action{display:inline-flex;align-items:center;margin-top:17px;color:var(--terra);font-weight:800;font-size:.93rem;text-decoration:underline;text-underline-offset:4px}
+.testimonial-action-close,.testimonial-details[open] .testimonial-action-open{display:none}
+.testimonial-details[open] .testimonial-action-close{display:inline}
+.testimonial-details[open] .testimonial-excerpt{display:none}
+.testimonial-details summary:hover .testimonial-action{color:#8f3e2a}
+.testimonial-details summary:focus-visible{outline:3px solid var(--terra);outline-offset:6px;border-radius:4px}
+.testimonial-full{margin:20px 0 0;padding:0;border:0;color:#4b554d;font-size:1rem;line-height:1.8;overflow-wrap:anywhere}
+.testimonial-full p{margin:0 0 14px}
+.testimonial-full p:last-child{margin-bottom:0}
+.testimonial-author{display:block;margin-top:25px;padding-top:16px;border-top:1px solid #efe7dc;font-style:normal;font-weight:800;color:var(--green)}
+@media(max-width:750px){.testimonials-grid{grid-template-columns:1fr;gap:18px}.testimonials-lead{margin-bottom:25px}.testimonial-card{padding:23px 20px}}
