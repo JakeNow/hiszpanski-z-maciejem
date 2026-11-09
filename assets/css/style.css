@@ -149,3 +149,6 @@
 .spanish-key:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
 @media(max-width:750px){.spanish-keyboard{gap:6px;padding:10px;margin:12px 0 18px;top:4px}.spanish-keyboard-label{flex:1 0 100%;margin-bottom:2px}.spanish-key{min-width:39px;min-height:44px;padding:7px 9px}}
 @media print{.spanish-keyboard{display:none}}
+
+/* Przy nieparzystej liczbie opinii ostatnia karta zajmuje cały drugi rząd. */
+@media(min-width:751px){.testimonials-grid>.testimonial-card:last-child:nth-child(odd){grid-column:1/-1}}
