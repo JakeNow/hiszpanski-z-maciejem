@@ -1,4 +1,4 @@
-# Hiszpański z Maciejem 🇪🇸
+# RONDA — Szkoła Językowa 🇪🇸
 
 Kompletna responsywna strona HTML/CSS/JavaScript, bez frameworka, kompilacji i bazy danych.
 
@@ -15,6 +15,10 @@ Kompletna responsywna strona HTML/CSS/JavaScript, bez frameworka, kompilacji i b
 Otwórz `index.html` w przeglądarce. Dla pełnego testu użyj lokalnego serwera: `python -m http.server 8000`, potem `http://localhost:8000`.
 
 ## Publikacja z GitHub
+
+Docelowy adres po zmianie nazwy repozytorium: https://jakenow.github.io/ronda/
+Repozytorium: https://github.com/JakeNow/ronda
+
 1. Utwórz repozytorium i wgraj **zawartość** tego katalogu do jego katalogu głównego.
 2. Do testów statycznej strony możesz użyć GitHub Pages (Settings → Pages → Deploy from a branch → main / root), o ile jest to zgodne z aktualnymi warunkami usługi.
 3. Przy docelowym zastosowaniu komercyjnym wybierz hosting dopuszczający takie wykorzystanie, np. odpowiedni plan hostingu statycznego po sprawdzeniu regulaminu. GitHub może nadal przechowywać kod.
