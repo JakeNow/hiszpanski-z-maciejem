@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return panel;
   };
-  document.title = game.title + ' | Hiszpański z Maciejem';
+  document.title = game.title + ' | RONDA — Szkoła Językowa';
   $('game-label').textContent = game.level + ' / ' + modeNames[game.type];
   $('game-title').textContent = game.title;
   $('game-desc').textContent = game.desc;
