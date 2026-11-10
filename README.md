@@ -25,7 +25,7 @@ Repozytorium: https://github.com/JakeNow/ronda
 4. Przetestuj wszystkie odnośniki, quizy oraz telefon.
 
 ## Konieczne zmiany przed publikacją
-- W `assets/js/main.js` zamień `WPISZ_EMAIL` na swój prawdziwy adres e-mail. Formularz **nie wysyła wiadomości sam** — otwiera aplikację pocztową odwiedzającego. Dla wygody użytkowników warto wdrożyć formularz hostowany przez dedykowaną usługę.
+- Kontakt na stronie jest realizowany przez linki `mailto:` w `kontakt.html`, `contacto.html` i `polityka-prywatnosci.html` (bez formularza). Aktualny adres: `szkolaronda@gmail.com`. Pamiętaj o aktualizacji wszystkich tych miejsc w razie zmiany skrzynki.
 - Uzupełnij `polityka-prywatnosci.html` o informacje wymagane dla rzeczywistej konfiguracji i działalności.
 - Zweryfikuj, czy wszystkie opisane rodzaje zajęć odpowiadają faktycznej ofercie.
 - Dodaj prawdziwe kwalifikacje do `o-mnie.html`, jeżeli chcesz je publikować.
