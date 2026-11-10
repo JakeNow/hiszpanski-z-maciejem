@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     parent.append(element);
     return element;
   };
-  document.title = m.title + ' | Hiszpański z Maciejem';
+  document.title = m.title + ' | RONDA — Szkoła Językowa';
   $('lesson-label').textContent = m.level + ' / ' + m.topic.toUpperCase();
   $('lesson-title').textContent = m.title;
   $('lesson-desc').textContent = m.desc;
